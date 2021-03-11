@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+body{
+    background-color: rgb(236, 236, 236);
+}
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: #fff;
+}
+
+.hero{
+    position: relative;
+    line-height:2.6rem;
+    padding: 3rem;
+    text-align: left;
+    user-select: none;
+}
+
+.purple-text{
+    padding: .2rem;
+    color: #606cf8;
+}
+.hero .circle{
+    position: absolute;
+    left:25.5rem;
+    width:6rem;
+    height:6rem;
+    background-color: rgb(204, 200, 200);
+    border-radius: 100%;
+}
+.cta{
+    appearance: none;
+    background-color: #606cf8;
+    padding: 1.5rem;
+    color:white;
+    font-weight: bolder;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
+.cta:hover{
+    background-color: #515ccf;
+}
+.projects{
+    align-items: center;
+
+    display: flex;
+}
+.project{
+    padding: 5rem 11rem 5rem 11rem;
+    border-radius: 1rem;
+    background-color: gray;
+    margin: 1rem;
+}
+.left-arrow{
+    background-color: rgb(131, 131, 131);
+    width:4rem;
+    height:4rem;
+    margin: auto;
+    border-radius: 100%;
+    text-align: center;
+}
+.left-arrow::after{
+    content:'<';
+    color: white;
+    margin: auto;
+    font-weight: bolder;
+}
