@@ -1,76 +1,331 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    --border: 1px solid rgb(214, 213, 213);
 }
-body{
-    background-color: rgb(236, 236, 236);
+
+.noto {
+    font-size: 12px;
+    color: rgb(20, 20, 20);
+    font-family: 'jetbrains mono', sans-serif;
 }
-.container{
+
+.gray {
+    color: rgb(34, 34, 34);
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(238, 236, 236);
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #000;
+}
+
+.link {
+    display: flex;
+    text-align: center;
+    margin: 1rem 1rem .5rem 2.5rem;
+    align-items: center;
+    color: rgb(175, 175, 175);
+}
+
+.link p {
+    margin-right: auto;
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+.link:hover img,
+.link:hover p {
+    opacity: 1;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.link img {
+    opacity: .5;
+    margin: 0;
+    width: 29px;
+}
+
+.main-div {
     display: flex;
     margin: auto;
     justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    background-color: #fff;
 }
 
-.hero{
+.bio {
+    text-align: center;
+    margin: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    height: 45vh;
+    padding-bottom: 5rem;
+    justify-content: center;
+    background-color: #fff;
+    border: var(--border);
+}
+
+.mid-div {
+    margin-top: 1rem;
+}
+
+.container {
+    width: 50vw;
+    height: 21rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: var(--border);
+}
+.bg-none{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    width: 100%;
+    padding: 0rem;
+    margin-top: .8rem;
+    justify-content: space-between;
+}
+.card{
+    padding: .5rem;
+    width: 48%;
+    margin: .2rem;
+    background-color: #fff;
+    border: var(--border);
+
+}
+.card img{
+    height: 80%;
+    width: 100%;
+    background-color:rgb(233, 233, 233);
+    object-fit:scale-down;
+}
+.card .header{
+    margin-top: .3rem;
+    padding-top: 1rem;
+    border-top: var(--border);
+    border-bottom: none;
+    text-align: center;
+}
+.stat:first-of-type {
+    border-right: 1px solid rgb(230, 230, 230);
+}
+
+.stat-holder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(252, 252, 252);
+    border-top: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.stat {
+    width: 100%;
     position: relative;
-    line-height:2.6rem;
+    text-align: center;
+    padding: .75rem;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.hero {
+    position: relative;
+    line-height: 2.6rem;
     padding: 3rem;
     text-align: left;
     user-select: none;
 }
 
-.purple-text{
-    padding: .2rem;
+.purple-text {
     color: #606cf8;
+    font-weight: bold;
 }
-.hero .circle{
+
+.name {
+    padding: .2rem;
+}
+
+.hero .circle {
     position: absolute;
-    left:25.5rem;
-    width:6rem;
-    height:6rem;
+    left: 25.5rem;
+    width: 6rem;
+    height: 6rem;
     background-color: rgb(204, 200, 200);
     border-radius: 100%;
 }
-.cta{
+
+.cta {
     appearance: none;
     background-color: #606cf8;
     padding: 1.5rem;
-    color:white;
+    color: white;
     font-weight: bolder;
-    outline:none;
-    border:none;
+    outline: none;
+    border: none;
     cursor: pointer;
 }
-.cta:hover{
+
+.cta:hover {
     background-color: #515ccf;
 }
-.projects{
-    align-items: center;
 
+.projects {
+    align-items: center;
     display: flex;
 }
-.project{
+
+.project {
     padding: 5rem 11rem 5rem 11rem;
     border-radius: 1rem;
     background-color: gray;
     margin: 1rem;
 }
-.left-arrow{
+
+.left-arrow {
     background-color: rgb(131, 131, 131);
-    width:4rem;
-    height:4rem;
+    width: 4rem;
+    height: 4rem;
     margin: auto;
     border-radius: 100%;
     text-align: center;
 }
-.left-arrow::after{
-    content:'<';
+
+.left-arrow::after {
+    content: '<';
     color: white;
     margin: auto;
     font-weight: bolder;
+}
+
+.header {
+    width: 100%;
+    padding-left: 0rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.logo .desc-text{
+    font-size: 12px;
+    margin-top: .4rem;
+    color: rgb(173, 173, 173);
+    transform: translateY(0rem);
+    transition: 0.3s ease all;
+}
+
+.desc-text {
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: rgb(145, 145, 145);
+}
+
+.logo-container {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: .25fr .25fr .25fr .25fr .25fr .25fr .25fr;
+    width: 100%;
+    align-content: center;
+    justify-content: start;
+    white-space: nowrap;
+    /* background-color: rgba(0, 0, 0, 0.068); */
+    border-radius: .5rem;
+}
+
+.logo {
+    background-color: whitesmoke;
+    border: var(--border);
+    cursor: default;
+    padding-top: .5rem;
+    margin: .6rem;
+    margin-top: .25rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+.logo .desc-text{
+    margin-top:.2rem;
+    width: 100%;
+    border-top: var(--border);
+}
+.logo:hover{
+    background-color: rgb(68, 68, 68);
+    transition: 0.3s ease all;
+}
+.logo:hover .desc-text{
+    color: white;
+    transition: 0.3s ease color;
+}
+.logo:first-of-type {
+    margin-left: .7rem;
+}
+
+.logo i {
+    font-size: 3em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: .5rem;
+    padding: 1rem;
+    border-bottom: 2px solid rgb(230, 230, 230);
+
+}
+
+li {
+    margin: 1rem;
+}
+li a{
+    color: rgb(182, 182, 182);
+}
+.selected a{
+    color: #000;
+    font-weight: bold;
+}
+.selected {
+    position: relative;
+}
+.selected::after{
+    content: '';
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 3px solid #606cf8;
+    position: absolute;
+    top: 1.4rem;
+    left: -.9rem;
+    margin: auto;
+    text-align: center;    
+}
+.top-bar{
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    border:1px solid var(--border);
+}
+.name-logo{
+    width: 91px;
+    height: 91px;
+    margin: auto;
+}
+.little-text{
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+    font-weight: normal;
 }
