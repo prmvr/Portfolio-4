@@ -21,7 +21,7 @@
 
 body {
     width: 100%;
-    background-color: rgb(238, 236, 236);
+    background-color: rgb(243, 243, 243);
 }
 
 a {
@@ -84,22 +84,25 @@ a {
 
 .container {
     width: 50vw;
-    height: 21rem;
+    height: 22rem;
     padding: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     background-color: rgb(255, 255, 255);
     border: var(--border);
 }
-.bg-none{
+
+.bg-none {
     background-color: transparent;
     border: none;
     display: flex;
     width: 100%;
+    height: 21rem;
     padding: 0rem;
     margin-top: .8rem;
     justify-content: space-between;
 }
-.card{
+
+.card {
     padding: .5rem;
     width: 48%;
     margin: .2rem;
@@ -107,19 +110,22 @@ a {
     border: var(--border);
 
 }
-.card img{
+
+.card img {
     height: 80%;
     width: 100%;
-    background-color:rgb(233, 233, 233);
-    object-fit:scale-down;
+    background-color: rgb(233, 233, 233);
+    object-fit: scale-down;
 }
-.card .header{
+
+.card .header {
     margin-top: .3rem;
     padding-top: 1rem;
     border-top: var(--border);
     border-bottom: none;
     text-align: center;
 }
+
 .stat:first-of-type {
     border-right: 1px solid rgb(230, 230, 230);
 }
@@ -188,13 +194,33 @@ h2 {
 .projects {
     align-items: center;
     display: flex;
+    overflow: hidden;
 }
 
 .project {
-    padding: 5rem 11rem 5rem 11rem;
-    border-radius: 1rem;
-    background-color: gray;
-    margin: 1rem;
+    display: none;
+    width: 100%;
+    margin: auto;
+    /* border-radius: 1rem; */
+}
+
+.project img {
+    width: 50%;
+    margin-right: auto;
+    /* margin: 1rem; */
+    background-color: rgb(201, 201, 201);
+    padding-bottom: 11rem;
+}
+
+.project div{
+    width: 50%;
+    margin-right: auto;
+    margin-left: 1rem;
+}
+.is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-arrow {
@@ -222,7 +248,11 @@ h2 {
     text-align: left;
 }
 
-.logo .desc-text{
+.projects-header {
+    padding-bottom: 0;
+}
+
+.logo .desc-text {
     font-size: 12px;
     margin-top: .4rem;
     color: rgb(173, 173, 173);
@@ -258,19 +288,23 @@ h2 {
     text-align: center;
     border-radius: .5rem;
 }
-.logo .desc-text{
-    margin-top:.2rem;
+
+.logo .desc-text {
+    margin-top: .2rem;
     width: 100%;
     border-top: var(--border);
 }
-.logo:hover{
+
+.logo:hover {
     background-color: rgb(68, 68, 68);
     transition: 0.3s ease all;
 }
-.logo:hover .desc-text{
+
+.logo:hover .desc-text {
     color: white;
     transition: 0.3s ease color;
 }
+
 .logo:first-of-type {
     margin-left: .7rem;
 }
@@ -292,17 +326,21 @@ ul {
 li {
     margin: 1rem;
 }
-li a{
+
+li a {
     color: rgb(182, 182, 182);
 }
-.selected a{
+
+.selected a {
     color: #000;
     font-weight: bold;
 }
+
 .selected {
     position: relative;
 }
-.selected::after{
+
+.selected::after {
     content: '';
     padding: 1rem;
     width: 100%;
@@ -311,21 +349,71 @@ li a{
     top: 1.4rem;
     left: -.9rem;
     margin: auto;
-    text-align: center;    
+    text-align: center;
 }
-.top-bar{
+
+.top-bar {
     width: 100%;
     padding: 2rem;
     background-color: white;
-    border:1px solid var(--border);
+    border: 1px solid var(--border);
 }
-.name-logo{
+
+.name-logo {
     width: 91px;
     height: 91px;
     margin: auto;
 }
-.little-text{
+
+.little-text {
     font-size: 12px;
     color: rgb(180, 180, 180);
     font-weight: normal;
+}
+
+button {
+    outline: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+}
+
+.buttons {
+    user-select: none;
+    border-top: var(--border);
+    margin-top: 1rem;
+    padding-top: .5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#left-slider-btn {
+    color: rgb(172, 172, 172);
+    position: relative;
+}
+
+#right-slider-btn {
+    color: rgb(172, 172, 172);
+    position: relative;
+}
+
+#left-slider-btn:hover::after {
+    content: '<';
+    position: absolute;
+}
+
+#right-slider-btn:hover::after {
+    content: '➤';
+    position: absolute;
+    white-space: nowrap;
+    transition: 0.3s ease all;
+}
+
+#right-slider-btn:hover,
+#left-slider-btn:hover {
+    cursor: pointer;
+    color: #000;
 }
