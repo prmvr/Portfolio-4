@@ -212,11 +212,12 @@ h2 {
     padding-bottom: 11rem;
 }
 
-.project div{
+.project div {
     width: 50%;
     margin-right: auto;
     margin-left: 1rem;
 }
+
 .is-active {
     display: flex;
     justify-content: center;
@@ -416,4 +417,95 @@ button {
 #left-slider-btn:hover {
     cursor: pointer;
     color: #000;
+}
+
+.mt {
+    padding: 0;
+    height: 36rem;
+    margin-top: 1rem;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+form div {
+    text-align: left;
+}
+.subject{
+    border-bottom:var(--border);
+    margin-bottom: .7rem;
+    padding-bottom: .7rem;
+}
+input {
+    border: none;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+    margin: .4rem;
+    margin-left: 0rem;
+    padding: .5rem;
+    width: 45%;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    margin: .3rem;
+    margin-left: 0rem;
+    resize: none;
+    padding: .5rem;
+    background-color: rgb(233, 233, 233);
+}
+textarea:focus::placeholder{
+    opacity:0;
+}
+form button {
+    background-color: #606cf8;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: .8rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #515ccf;
+    transition: 0.3s ease all;
+}
+.check {
+    display: flex;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    align-content: center;
+    text-align: left;
+    border-bottom: var(--border);
+}
+
+.check input[type='checkbox'] {
+    border:none;
+    outline:none;
+    appearance: none;
+    background-color:rgb(233, 233, 233);
+    position: relative;
+    margin: .3rem;
+    width: 2%;
+}
+.check input[type='checkbox']:checked::after{
+    content:'✓';
+    position: absolute;
+    top:-2%;
+    left:25%;
+    font-weight: bolder;
+    color: black;
+}
+.check label {
+    margin-right: auto;
 }
