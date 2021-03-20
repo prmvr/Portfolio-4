@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
     --border: 1px solid rgb(214, 213, 213);
+    --ccolor: rgb(255, 255, 255);
 }
 
 .noto {
@@ -21,7 +22,8 @@
 
 body {
     width: 100%;
-    background-color: rgb(243, 243, 243);
+    background-color: #F6F8FA;
+    /* background-color: rgb(243, 243, 243); */
 }
 
 a {
@@ -29,6 +31,11 @@ a {
     padding: 0;
     text-decoration: none;
     color: #000;
+}
+
+.top-bar {
+    padding: 1rem;
+    background-color: #283E4A;
 }
 
 .link {
@@ -63,10 +70,12 @@ a {
     margin: auto;
     justify-content: center;
 }
-.left{
+
+.left {
     justify-content: start;
     margin-left: 1%;
 }
+
 .bio {
     text-align: center;
     margin: 1rem;
@@ -77,7 +86,7 @@ a {
     height: 45vh;
     padding-bottom: 5rem;
     justify-content: center;
-    background-color: #fff;
+    background-color: var(--ccolor);
     border: var(--border);
 }
 
@@ -87,15 +96,18 @@ a {
 
 .container {
     width: 50vw;
+    position: relative;
     height: 22rem;
     padding: 2rem;
     margin-bottom: .5rem;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--ccolor);
     border: var(--border);
 }
-.container:last-of-type{
+
+.container:last-of-type {
     margin-bottom: 5rem;
 }
+
 .bg-none {
     background-color: transparent;
     border: none;
@@ -107,74 +119,92 @@ a {
     justify-content: space-between;
 }
 
-.card {
-    position: relative;
-    /* overflow: hidden; */
-    height: 20rem;
-    width:24.5rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border: var(--border);
-}
-.card:last-of-type::after{
-    content:'NEW';
+.card::after {
+    content: '5';
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top:1rem;
-    right:-.9rem;
-    background-color:rgb(77, 16, 221);
-    color:white;
+    top: -.2rem;
+    right: -.75rem;
+    background-color: #283E4A;
+    color: white;
     font-weight: bolder;
-    width: 2.5rem;
-    height:2.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
     text-align: center;
-    border-radius:50%;
+    border-radius: 50%;
     z-index: 1;
-    font-size: 12px;
+    font-size: 13px;
 }
+
+.card:last-of-type::after {
+    content: '3';
+}
+
+.card {
+    position: relative;
+    /* overflow: hidden; */
+    height: 19.6rem;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ccolor);
+    border: var(--border);
+}
+
 
 .card-img {
     display: none;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    object-fit:contain;  
+    object-fit: scale-down;
+    /* margin-top: -2rem; */
 }
-.static{
+
+.static {
     display: block;
     position: absolute;
-    top:-2.4rem;
-    width:100%;
-    height:100%;
+    top: -2.4rem;
+    width: 100%;
+    height: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    object-fit:contain; 
-    background-color: transparent!important;
+    object-fit: contain;
+    background-color: transparent !important;
 }
-.card:hover .static{
+
+.card:hover {
+    background-color: rgb(240, 240, 240);
+    transition: .3s ease all;
+}
+
+.card:hover .static {
     opacity: 0;
-    transition: 1s ease all;
+    transition: .5s ease all;
 }
-.card:hover .card-img{
+
+.card:hover .card-img {
     display: block;
 }
+
 .card .header {
     position: absolute;
-    bottom:0;
-    padding-top: 1rem;
-    margin-top: .3rem;
-    border-top: var(--border);
+    bottom: .5rem;
+    padding-top: 0rem;
+    /* border-top: var(--border); */
     border-bottom: none;
     text-align: center;
-    color: #000;
+    color: rgb(44, 44, 44);
 }
-.card:hover .header{
+
+.card:hover .header {
     position: relative;
-    bottom: 0;
+    bottom: .5rem;
+    transform: translateY(.5rem);
+    transition: 0.3s ease transform;
 }
 
 .stat:first-of-type {
@@ -255,7 +285,7 @@ h2 {
     /* border-radius: 1rem; */
 }
 
-.project img{
+.project img {
     width: 60%;
     margin-right: auto;
     object-fit: cover;
@@ -282,13 +312,6 @@ h2 {
     text-align: center;
 }
 
-.left-arrow::after {
-    content: '<';
-    color: white;
-    margin: auto;
-    font-weight: bolder;
-}
-
 .header {
     width: 100%;
     padding-left: 0rem;
@@ -313,6 +336,7 @@ h2 {
 .desc-text {
     font-size: 15px;
     line-height: 1.5rem;
+    margin-bottom: .5rem;
     color: rgb(145, 145, 145);
 }
 
@@ -346,7 +370,7 @@ h2 {
 }
 
 .logo:hover {
-    background-color: rgb(68, 68, 68);
+    background-color: #283E4A;
     transition: 0.3s ease all;
 }
 
@@ -402,13 +426,6 @@ li a {
     text-align: center;
 }
 
-.top-bar {
-    width: 100%;
-    padding: 2rem;
-    background-color: white;
-    border: 1px solid var(--border);
-}
-
 .name-logo {
     width: 91px;
     height: 91px;
@@ -444,23 +461,13 @@ button {
 #left-slider-btn {
     color: rgb(172, 172, 172);
     position: relative;
+    font-size: 15px;
 }
 
 #right-slider-btn {
     color: rgb(172, 172, 172);
     position: relative;
-}
-
-#left-slider-btn:hover::after {
-    content: '<';
-    position: absolute;
-}
-
-#right-slider-btn:hover::after {
-    content: '➤';
-    position: absolute;
-    white-space: nowrap;
-    transition: 0.3s ease all;
+    font-size: 15px;
 }
 
 #right-slider-btn:hover,
@@ -485,11 +492,13 @@ form {
 form div {
     text-align: left;
 }
-.subject{
-    border-bottom:var(--border);
+
+.subject {
+    border-bottom: var(--border);
     margin-bottom: .7rem;
     padding-bottom: .7rem;
 }
+
 input {
     border: none;
     outline: none;
@@ -513,9 +522,11 @@ textarea {
     padding: .5rem;
     background-color: rgb(233, 233, 233);
 }
-textarea:focus::placeholder{
-    opacity:0;
+
+textarea:focus::placeholder {
+    opacity: 0;
 }
+
 form button {
     background-color: #606cf8;
     color: white;
@@ -527,10 +538,12 @@ form button {
     border-radius: .25rem;
     cursor: pointer;
 }
-form button:hover{
+
+form button:hover {
     background-color: #515ccf;
     transition: 0.3s ease all;
 }
+
 .check {
     display: flex;
     padding-bottom: 1rem;
@@ -541,22 +554,44 @@ form button:hover{
 }
 
 .check input[type='checkbox'] {
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
     appearance: none;
-    background-color:rgb(233, 233, 233);
+    background-color: rgb(233, 233, 233);
     position: relative;
     margin: .3rem;
     width: 2%;
 }
-.check input[type='checkbox']:checked::after{
-    content:'✓';
+
+.check input[type='checkbox']:checked::after {
+    content: '✓';
     position: absolute;
-    top:-2%;
-    left:25%;
+    top: -2%;
+    left: 25%;
     font-weight: bolder;
     color: black;
 }
+
 .check label {
     margin-right: auto;
+}
+
+.view-btn,
+.visit-btn {
+    user-select: none;
+    background-color: rgb(66, 96, 231);
+    padding: .3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+    border-radius: .25rem;
+    font-size: 14px;
+}
+.visit-btn {
+    background-color: #000;
+    margin-left: 1%;
+}
+.not-live{
+    opacity: 0.25;
+    pointer-events: none;
 }
