@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio | PS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Noto+Sans+JP&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="top-bar">
+
+    </div>
+    <nav>
+        <ul>
+            <li class=""><a href="index.html">Summary</a></li>
+            <li class=""><a href="contact.html">Contact</a></li>
+            <li class="selected"><a href="">Projects</a></li>
+            <li class=""><a href="">View Resume</a></li>
+        </ul>
+    </nav>
+    <div class="main-div">
+        <!-- <div class="bio">
+            <img src="logo.png" alt="name logo" class="name-logo">
+            <h3 class="purple-text name">Paramveer Singh</h3>
+            <p class=" gray">California, USA</p>
+            <div class="stat-holder">
+                <div class="stat">
+                    <h2 id="repos"></h2>
+                    <h3 class="noto">Repositories</h3>
+                </div>
+                <div class="stat">
+                    <h2 id="following">Prmvr</h2>
+                    <h3 class="noto">Github</h3>
+                </div>
+            </div>
+            <div class="link-holder">
+                <a href="https://github.com/Prmvr" class="link" target="_blank">
+                    <img src="GitHub-Mark-32px.png" alt="">
+                    <p>https://github.com/Prmvr</p>
+                </a>
+                <a href="" class="link">
+                    <img src="" alt="">
+                    <p>Contact Information</p>
+                </a>
+                <a href="" class="link">
+                    <img src="" alt="">
+                    <p>View Resume</p>
+                </a>
+
+            </div>
+        </div> -->
+        <div class="mid-div">
+            <div class="container-wrapper">
+                <h4 class="header">2021 Projects</h4>
+                <div class="project-wrapper">
+                    <h4 class="header">Job Postings API</h4>
+                    <img src="jobs.gif" alt="">
+                    <h4 class="header">Project Description</h4>
+                    <p class="desc-text">This project pulls in Job postings and displays them in a nicer looking format.
+                        I used React Router to generate dynamic URLs for each ID. I also added a light/dark theme and am
+                        using <span class="code">localStorage</span> to hold the user preferences. You can search by
+                        title, location, or the job type. The project was made in React Native and I decided to use
+                        Fetch instead of importing Axios. I also created icons to show if the job was full time, part
+                        time, or contract.</p>
+                    <h4 class="header">Challenges</h4>
+                    <p class="desc-text">One of the neat things I added was a function to the <span
+                            class="code">GlobalProvider</span> that took in the date from the API and returned it in a
+                        more readable format. For example instead of the date it would say a 2 Weeks ago for better
+                        readability. Instead of keeping the function to the global scope of that particular script and
+                        having to copy it and add it to another page that was also using it (the job description page) I
+                        created a context to store the function for reusability.</p>
+                </div>
+                <div class="project-wrapper">
+                    <h4 class="header"></h4>
+                    <img src="jobs.gif" alt="">
+                    <h4 class="header">Project Description</h4>
+                    <p class="desc-text"></p>
+                </div>
+                <div class="project-wrapper">
+                    <h4 class="header">Job Postings API</h4>
+                    <img src="jobs.gif" alt="">
+                    <h4 class="header">Project Description</h4>
+                    <p class="desc-text"></p>
+                </div>
+                <div class="project-wrapper">
+                    <h4 class="header"></h4>
+                    <img src="jobs.gif" alt="">
+                    <h4 class="header">Project Description</h4>
+                    <p class="desc-text"></p>
+                </div>
+                <div class="project-wrapper">
+                    <h4 class="header">PHP Forum</h4>
+                    <img src="4.JPG" alt="" class="hero">
+                    <h4 class="header">Project Description</h4>
+                    <p class="desc-text">A forum board that has user profiles/friend lists and icons, a special icon for
+                        moderators in chat/ PMs + unique username color and badge, along with a discussion board on all
+                        user profiles. There is a sign up page as well as a login page. Username availability is checked
+                        automatically after a user exits and there is form validation animations. (The site is not
+                        currently live because Netlify does not support PHP hosting but can be deployed on a remote
+                        server using AMPPS or a similar tool)</p>
+                    <img src="2.JPG" alt="" class="hero">
+                    <h4 class="header">Unique Challenges</h4>
+                    <p class="desc-text">this was my first PHP and MySQL project. Previously I was working on small
+                        database and PHP projects such as an address book. This was my biggest PHP and mySQL project and
+                        a challenge I faced was some of the logic involved in sorting through the database to find who
+                        is a friend of the user as well as following, followers, and mutual friends. I achieved this by
+                        using <span class="code">Array_intersect($followers, $following)</span> and <br><span
+                            class="code">Array_diff($followers, $mutual)</span>. Then I iterated through each list.
+                        Another issue was making sure that each array was countable so that it did not result in an
+                        error if one list was empty. this was fixed by doing a check to see if it was
+                        countable.<br><span class="code">if(countable(count($mutual)) $following : [ ])</span>.</p>
+                    <h4 class="header">Links</h4>
+                    <a href="" class="view-btn"><img src="GitHub-Mark-32px.png" alt="" style="width:32px"> View Code</a>
+                </div>
+
+            </div>
+            <div class="container-wrapper">
+                <h4 class="header">2020 Projects</h4>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
