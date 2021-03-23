@@ -320,6 +320,7 @@ h2 {
     margin-bottom: 1rem;
     text-align: left;
 }
+
 .projects-header {
     padding-bottom: 0;
 }
@@ -491,6 +492,7 @@ form {
 form div {
     text-align: left;
 }
+
 .subject {
     border-bottom: var(--border);
     margin-bottom: .7rem;
@@ -585,33 +587,39 @@ form button:hover {
     border-radius: .25rem;
     font-size: 14px;
 }
+
 .visit-btn {
     background-color: #000;
     margin-left: 1%;
 }
-.not-live{
+
+.not-live {
     opacity: 0.25;
     pointer-events: none;
 }
-.project-wrapper{
+
+.project-wrapper {
     display: flex;
-    text-align:left;
-    margin:auto;
+    text-align: left;
+    margin: auto;
     flex-direction: column;
     background-color: #fff;
     padding: 2rem;
     border: var(--border);
 
 }
-.project-wrapper img{
-    width:70%;
+
+.project-wrapper img {
+    width: 70%;
     margin: auto;
 }
-.container-wrapper{
+
+.container-wrapper {
     width: 70vw;
 }
-.code{
-    color:rgb(97, 97, 97);
+
+.code {
+    color: rgb(97, 97, 97);
     background-color: rgb(211, 211, 211);
     padding: .16rem;
     font-family: 'Jetbrains mono';
@@ -620,21 +628,59 @@ form button:hover {
     font-weight: bold;
     border-radius: .25rem;
 }
-.container-wrapper a{
-    margin: auto;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-.container-wrapper a img{
-    margin-right: .5rem;
-    width: 32px;
-}
-.container-wrapper a:hover{
-    background-color: #0000;
-    transition: 0.3s ease all;
-}
-.hero{
+
+.hero {
     object-fit: contain;
     padding-top: 1rem;
+}
+
+.visit {
+    position: relative;
+    text-align: center;
+    margin-top: .5rem !important;
+    width: 12rem;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    padding-left: 1rem;
+    color: #fff;
+    white-space: nowrap;
+    border-radius: .25rem;
+    background-color: rgb(117, 117, 117);
+    font-size: 13px;
+}
+.visit::after{
+    opacity:0;
+}
+.visit:hover::after{
+    opacity: 1;
+    content:" | 🛈 Netlify Hosting";
+    transition: 0.5s linear all;
+    /* margin-left: .3rem; */
+}
+.visit:first-of-type:hover::after {
+    /* margin-left: .3rem; */
+    opacity:1;
+    content: " | 🛈 GitHub Code";
+    transition: 0.5s linear all;
+}
+
+.visit:hover {
+    /* width: 55%; */
+    padding-right: 8rem;
+    background-color: #030303;
+    transition: 0.5s linear all;
+}
+.a-wrapper{
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mt-5{
+    margin-top: 5rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 5px solid rgb(165, 165, 165);
 }
