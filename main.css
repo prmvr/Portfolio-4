@@ -120,7 +120,7 @@ a {
 }
 
 .card::after {
-    content: '5';
+    content: '3';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,7 @@ a {
 }
 
 .card:last-of-type::after {
-    content: '3';
+    content: '5';
 }
 
 .card {
@@ -605,10 +605,34 @@ form button:hover {
     flex-direction: column;
     background-color: #fff;
     padding: 2rem;
+    margin-bottom: 5rem;
     border: var(--border);
 
 }
+.project-wrapper .header::before{
+    content: "";
+    position: relative;
+    padding: .2rem;
+    margin-right:.5rem;
+    background-color: rgb(211, 211, 211);
+}
+.project-wrapper .header:first-of-type{
+    font-size: 20px;
+    padding-top: 0rem;
+    text-align: center;
+    /* border-bottom: 0px solid #000; */
+}
+.project-wrapper .header:first-of-type:before{
+    content: "";
+    position: relative;
+    padding: 0rem;
+    margin-right:0rem;
+}
 
+.project-wrapper .header{
+    padding-top: 2rem;
+    padding-bottom: .4rem;
+}
 .project-wrapper img {
     width: 70%;
     margin: auto;
@@ -656,10 +680,8 @@ form button:hover {
     opacity: 1;
     content:" | 🛈 Netlify Hosting";
     transition: 0.5s linear all;
-    /* margin-left: .3rem; */
 }
 .visit:first-of-type:hover::after {
-    /* margin-left: .3rem; */
     opacity:1;
     content: " | 🛈 GitHub Code";
     transition: 0.5s linear all;
@@ -680,7 +702,10 @@ form button:hover {
 }
 .mt-5{
     margin-top: 5rem;
-    background-color: #fff;
+    background-color: rgb(219, 219, 219);
     padding: 1rem;
-    border-bottom: 5px solid rgb(165, 165, 165);
+    border-bottom: 5px solid rgb(199, 199, 199);
+}
+.d-none{
+    opacity: 0;
 }
