@@ -82,12 +82,22 @@ a {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    width: 22%;
-    height: 45vh;
+    width: 22rem;
+    height: 23rem;
+    padding: 1.5rem;
     padding-bottom: 5rem;
     justify-content: center;
+    align-content: center;
     background-color: var(--ccolor);
     border: var(--border);
+}
+
+.smaller-bio {
+    height: 35vh;
+}
+
+.smaller-bio .desc-text {
+    margin-top: .5rem;
 }
 
 .mid-div {
@@ -298,7 +308,7 @@ h2 {
 }
 
 .is-active {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 }
@@ -609,30 +619,34 @@ form button:hover {
     border: var(--border);
 
 }
-.project-wrapper .header::before{
+
+.project-wrapper .header::before {
     content: "";
     position: relative;
     padding: .2rem;
-    margin-right:.5rem;
+    margin-right: .5rem;
     background-color: rgb(211, 211, 211);
 }
-.project-wrapper .header:first-of-type{
+
+.project-wrapper .header:first-of-type {
     font-size: 20px;
     padding-top: 0rem;
     text-align: center;
     /* border-bottom: 0px solid #000; */
 }
-.project-wrapper .header:first-of-type:before{
+
+.project-wrapper .header:first-of-type:before {
     content: "";
     position: relative;
     padding: 0rem;
-    margin-right:0rem;
+    margin-right: 0rem;
 }
 
-.project-wrapper .header{
+.project-wrapper .header {
     padding-top: 2rem;
     padding-bottom: .4rem;
 }
+
 .project-wrapper img {
     width: 70%;
     margin: auto;
@@ -673,16 +687,19 @@ form button:hover {
     background-color: rgb(117, 117, 117);
     font-size: 13px;
 }
-.visit::after{
-    opacity:0;
+
+.visit::after {
+    opacity: 0;
 }
-.visit:hover::after{
+
+.visit:hover::after {
     opacity: 1;
-    content:" | 🛈 Netlify Hosting";
+    content: " | 🛈 Netlify Hosting";
     transition: 0.5s linear all;
 }
+
 .visit:first-of-type:hover::after {
-    opacity:1;
+    opacity: 1;
     content: " | 🛈 GitHub Code";
     transition: 0.5s linear all;
 }
@@ -693,19 +710,159 @@ form button:hover {
     background-color: #030303;
     transition: 0.5s linear all;
 }
-.a-wrapper{
+
+.a-wrapper {
     width: 25rem;
     display: flex;
     justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
 }
-.mt-5{
+
+.mt-5 {
     margin-top: 5rem;
     background-color: rgb(219, 219, 219);
     padding: 1rem;
     border-bottom: 5px solid rgb(199, 199, 199);
 }
-.d-none{
-    opacity: 0;
+
+@media only screen and (max-width: 900px) {
+     li{
+         word-wrap: none;
+        margin: .5rem;
+        margin-bottom: 1rem;
+        padding: 0rem;
+    }
+
+    li a{
+        font-size: 13px;
+    }
+    .main-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bio {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .link-holder a {
+    }
+    .mid-div{
+        width: 93%;
+        justify-content: center;
+        margin:auto;
+        align-content: center;
+    }
+    .mid-div .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        margin:auto;
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .container .header{
+        padding: .5rem;
+        padding-left: 1rem;
+    }
+    .container .desc-text{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .view-btn, .visit-btn{
+        margin-bottom: 1rem;
+    }
+    .project{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .is-active{
+        display: block;
+    }
+    .project div{
+        width: 100%;
+        display: block;
+    }
+    .project img{
+        width: 100%;
+        margin: 0;
+
+    }
+    .bg-none{
+        margin-bottom: 0rem;
+        /* width: 100%!important; */
+        height: 30rem!important;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .card:first-of-type{
+        display: none;
+    }
+    .card{
+        width: 100%;
+    }
+    .bg-none a{
+        margin-bottom: 1rem;
+    }
+    .container{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-right: 0;
+        margin-left: 0;
+        height: 32rem;
+    }
+    button{
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .container:nth-of-type(1){
+        height: 20rem!important;
+        padding: 0!important;
+    }
+    .logo-container {
+        overflow: scroll;
+        display: grid;
+        grid-template-columns: .25fr .25fr .25fr;
+        width: 100%;
+        align-content: center;
+        justify-content: start;
+        white-space: nowrap;
+        /* background-color: rgba(0, 0, 0, 0.068); */
+        border-radius: .5rem;
+    }
+    .mid-div .mt{
+            margin-top: 10rem;
+    }
+    form{
+        border: var(--border);
+        background-color: #fff;
+    }
+     input{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+    .container-wrapper{
+        width: 99%;
+        margin:0;
+    }
+    .a-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
 }
