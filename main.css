@@ -726,17 +726,25 @@ form button:hover {
     border-bottom: 5px solid rgb(199, 199, 199);
 }
 
-@media only screen and (max-width: 900px) {
-     li{
-         word-wrap: none;
+@media only screen and (max-width: 1100px) {
+    .smaller-bio{
+        height: 60rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+  
+    li {
+        word-wrap: none;
         margin: .5rem;
         margin-bottom: 1rem;
         padding: 0rem;
     }
 
-    li a{
+    li a {
         font-size: 13px;
     }
+
     .main-div {
         display: flex;
         flex-direction: column;
@@ -745,75 +753,91 @@ form button:hover {
     .bio {
         margin-left: auto;
         margin-right: auto;
+        width: 99%;
     }
 
-    .link-holder a {
-    }
-    .mid-div{
+    .mid-div {
         width: 93%;
         justify-content: center;
-        margin:auto;
+        margin: auto;
         align-content: center;
     }
-    .mid-div .container{
+
+    .mid-div .container {
         display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-content: center;
-        margin:auto;
+        margin: auto;
         margin-bottom: 2rem;
         padding-top: 2rem;
-        padding-bottom: 2.5rem;
+    }
+    .container:nth-of-type(2){
+        padding-bottom: 10.5rem;
+        padding-top: 6.5rem;
+        height: 37rem;
     }
 
-    .container .header{
+    .container .header {
         padding: .5rem;
+        margin-top: 2rem;
         padding-left: 1rem;
     }
-    .container .desc-text{
+
+    .container .desc-text {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    .view-btn, .visit-btn{
+
+    .view-btn,
+    .visit-btn {
         margin-bottom: 1rem;
     }
-    .project{
+
+    .project {
         display: none;
         flex-direction: column;
         width: 100%;
 
     }
-    .is-active{
+
+    .is-active {
         display: block;
     }
-    .project div{
+
+    .project div {
         width: 100%;
         display: block;
     }
-    .project img{
+
+    .project img {
         width: 100%;
         margin: 0;
 
     }
-    .bg-none{
+
+    .bg-none {
         margin-bottom: 0rem;
         /* width: 100%!important; */
-        height: 30rem!important;
+        height: 30rem !important;
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    .card:first-of-type{
+    .card:first-of-type {
         display: none;
     }
-    .card{
+
+    .card {
         width: 100%;
     }
-    .bg-none a{
+
+    .bg-none a {
         margin-bottom: 1rem;
     }
-    .container{
+
+    .container {
         width: 100%;
         padding: 0;
         margin: 0;
@@ -821,16 +845,19 @@ form button:hover {
         margin-left: 0;
         height: 32rem;
     }
-    button{
+
+    button {
         margin-right: 1rem;
         margin-left: 1rem;
         padding: 0;
         margin-bottom: 0;
     }
-    .container:nth-of-type(1){
-        height: 20rem!important;
-        padding: 0!important;
+
+    .container:nth-of-type(1) {
+        height: 20rem !important;
+        padding: 0 !important;
     }
+
     .logo-container {
         overflow: scroll;
         display: grid;
@@ -842,24 +869,30 @@ form button:hover {
         /* background-color: rgba(0, 0, 0, 0.068); */
         border-radius: .5rem;
     }
-    .mid-div .mt{
-            margin-top: 10rem;
+
+    .mid-div .mt {
+        margin-top: 10rem;
     }
-    form{
+
+    form {
         border: var(--border);
         background-color: #fff;
     }
-     input{
+
+    input {
         width: 100%;
     }
-    textarea{
+
+    textarea {
         width: 100%;
     }
-    .container-wrapper{
+
+    .container-wrapper {
         width: 99%;
-        margin:0;
+        margin: 0;
     }
-    .a-wrapper{
+
+    .a-wrapper {
         display: flex;
         flex-direction: column;
         width: 100%;
