@@ -571,6 +571,7 @@ form button:hover {
     position: relative;
     margin: .3rem;
     width: 2%;
+    height: 2%;
 }
 
 .check input[type='checkbox']:checked::after {
@@ -725,7 +726,12 @@ form button:hover {
     padding: 1rem;
     border-bottom: 5px solid rgb(199, 199, 199);
 }
-
+.smaller-bio a{
+    color: purple;
+}
+.smaller-bio a:hover{
+    text-decoration: underline;
+}
 @media only screen and (max-width: 1100px) {
     .main-div .bio:last-of-type {
         opacity: 0;
@@ -914,4 +920,5 @@ form button:hover {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    
 }
