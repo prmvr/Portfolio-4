@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    --border: 1px solid rgb(214, 213, 213);
-    --ccolor: rgb(255, 255, 255);
+    --border: 1px solid rgb(213, 214, 214);
+    --ccolor: rgb(247, 247, 247);
 }
 
 .noto {
@@ -225,7 +225,6 @@ a {
     display: flex;
     width: 100%;
     justify-content: center;
-    background-color: rgb(252, 252, 252);
     border-top: 1px solid rgb(230, 230, 230);
     border-bottom: 1px solid rgb(230, 230, 230);
 }
@@ -257,7 +256,9 @@ h2 {
 .name {
     padding: .2rem;
 }
-
+.smaller-bio .name{
+    margin-top: 3rem;
+}
 .hero .circle {
     position: absolute;
     left: 25.5rem;
@@ -338,7 +339,7 @@ h2 {
 .logo .desc-text {
     font-size: 12px;
     margin-top: .4rem;
-    color: rgb(173, 173, 173);
+    color: rgb(155, 155, 155);
     transform: translateY(0rem);
     transition: 0.3s ease all;
 }
@@ -726,12 +727,15 @@ form button:hover {
     padding: 1rem;
     border-bottom: 5px solid rgb(199, 199, 199);
 }
-.smaller-bio a{
+
+.smaller-bio a {
     color: purple;
 }
-.smaller-bio a:hover{
+
+.smaller-bio a:hover {
     text-decoration: underline;
 }
+
 @media only screen and (max-width: 1100px) {
     .main-div .bio:last-of-type {
         opacity: 0;
@@ -920,5 +924,5 @@ form button:hover {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    
+
 }
