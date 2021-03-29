@@ -107,7 +107,7 @@ a {
 .container {
     width: 50vw;
     position: relative;
-    height: 26rem;
+    height: 22rem;
     padding: 2rem;
     margin-bottom: .5rem;
     background-color: var(--ccolor);
