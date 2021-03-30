@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    --border: 1px solid rgb(213, 214, 214);
+    --border: 1px solid rgb(255, 255, 255);
     --ccolor: rgb(247, 247, 247);
 }
 
@@ -768,7 +768,10 @@ form button:hover {
     .main-div .bio:last-of-type {
         opacity: 1;
     }
-
+    .container{
+        opacity:1;
+        background-color: #fff;
+    }
     li {
         word-wrap: none;
         margin: .5rem;
