@@ -563,6 +563,19 @@ form button:hover {
     text-align: left;
     border-bottom: var(--border);
 }
+.container:first-of-type{
+    opacity:1;
+    background-color:transparent;
+}
+.container{
+    opacity: 0.5;
+    background-color: #fff;
+}
+.container:hover{
+    opacity:1;
+    background-color: #fff;
+    transition: 0.1s ease all;
+}
 
 .check input[type='checkbox'] {
     border: none;
