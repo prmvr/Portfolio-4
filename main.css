@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    --border: 1px solid rgb(255, 255, 255);
-    --ccolor: rgb(247, 247, 247);
+    --border: 1px solid rgb(221, 221, 221);
+    --ccolor: rgb(255, 255, 255);
 }
 
 .noto {
@@ -22,7 +22,7 @@
 
 body {
     width: 100%;
-    background-color: #F6F8FA;
+    background-color: #e7f3ff;
     /* background-color: rgb(243, 243, 243); */
 }
 
@@ -112,6 +112,8 @@ a {
     margin-bottom: .5rem;
     background-color: var(--ccolor);
     border: var(--border);
+    opacity: 0.5;
+    background-color: #fff;
 }
 
 .container:last-of-type {
@@ -324,6 +326,7 @@ h2 {
 }
 
 .header {
+    font-family: 'Lato', 'Noto Sans JP';
     width: 100%;
     padding-left: 0rem;
     padding-bottom: 1.5rem;
@@ -563,19 +566,20 @@ form button:hover {
     text-align: left;
     border-bottom: var(--border);
 }
-.container:first-of-type{
-    opacity:1;
-    background-color:transparent;
-}
-.container{
-    opacity: 0.5;
-    background-color: #fff;
-}
+
   
 .container:hover{
     opacity:1;
     background-color: #fff;
     transition: 0.1s ease all;
+}
+.container:first-of-type{
+    opacity:1;
+    background-color:transparent;
+}
+.container:first-of-type:hover{
+    opacity:1;
+    background-color:transparent;
 }
 
 .check input[type='checkbox'] {
@@ -737,7 +741,6 @@ form button:hover {
 
 .mt-5 {
     margin-top: 5rem;
-    background-color: rgb(219, 219, 219);
     padding: 1rem;
     border-bottom: 5px solid rgb(199, 199, 199);
 }
